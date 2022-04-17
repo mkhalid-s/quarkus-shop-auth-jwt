@@ -4,7 +4,6 @@ import org.ks.learn.shop.auth.services.JwtService;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
-import javax.inject.Singleton;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
@@ -20,7 +19,7 @@ public class ShoppingJwtResource {
 
     @GET
     @Produces(MediaType.TEXT_PLAIN)
-    public Response getJwtToken(){
+    public Response getJwtToken() {
         return Response.ok(shoppingJwtService.generateJwtToken()).build();
     }
 }
